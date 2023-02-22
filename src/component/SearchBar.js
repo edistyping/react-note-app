@@ -1,10 +1,11 @@
-
+import '../App.css'
 
 export default function SearchBar( {onChange, value} ) {
   const styleContainer = {
-    height: '10vh',
+    maxHeight: '5vh',
     width: "70%",
-    backgroundColor: "lime",
+    backgroundColor: "red",
+    marginTop: "2%",
 
   }
 

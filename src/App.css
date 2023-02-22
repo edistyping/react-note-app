@@ -4,16 +4,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   margin: auto;
 
-  background-color: lightgreen;
   color: white;
   
   min-height: 100vh;
-  width: 85vw;
+  max-width: 85vw;
 
 }
 
 
+/*     For Notes.js         */
+.Notes-Buttons {
+  display: flex;
+  width: fit-content;
+  background-color: aqua;
+}
+
+
+/*     For FilterBar.js     */
+.FilterBar-Container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  background-color: yellowgreen;
+  height: 100%;
+  width: 70%;
+}
+.FilterBar-Container button {
+  margin-right: 3%;
+  width: 100px;
+  height: 100%;
+}
+.FilterButton-Selected0{
+  background-color: gold;
+}
+.FilterButton-Selected1{
+  background-color: lightskyblue;
+}
+.FilterButton-Selected2{
+  background-color: lightgreen;
+}
+.FilterButton-Selected3{
+  background-color: lightpink;
+}

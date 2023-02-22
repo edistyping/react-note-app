@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import Note from './Note'
 import EditNote from './EditNotes'
-
+import '../App.css'
 
 export default function Notes( {handleEdit, handleDelete, notes, category} ) {
     const styleContainer = {
@@ -37,15 +37,16 @@ export default function Notes( {handleEdit, handleDelete, notes, category} ) {
     return (
       <>
         <div style={styleContainer} >
-            <p>Note Here... {selectedNotes.length} </p>
-            <p>category: {category}</p>
-            <br/>
+            <p>There are {selectedNotes.length} notes! </p>
+
             {selectedNotes.map((note, i) => {
                 return(
                       <div style={noteContainer} key={i} >
                           <div>
-                              <h3>({i}) {note.title} - {note.category}</h3>
-                              <div>
+                            
+                              <h3>({i}) {note.title} - {note.category}<span>{note.date}</span></h3>
+
+                              <div className="Notes-Buttons">
                                   <EditNote handleSubmitEdit={handleSubmitEdit} key1={i} note={note}/>
                                   <button onClick={() => {handleDelete(i)}}>Delete</button>
                               </div>
@@ -53,9 +54,7 @@ export default function Notes( {handleEdit, handleDelete, notes, category} ) {
                           <p>{note.detail}</p>
                       </div>
                 )
-            })
-
-            }
+            })}
    
         </div>
       </>

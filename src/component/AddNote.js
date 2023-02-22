@@ -3,9 +3,16 @@ import { useState, useEffect } from 'react';
 
 export default function AddNote( {handleSubmit, value} ) {
     const styleContainer = {
-      height: '10vh',
-      width: "70%",
-      backgroundColor: "blue",
+        height: '10vh',
+        width: "70%",
+        backgroundColor: "orange",
+        display: "flex",        
+    }
+    const customButton = {
+        width: "80%",
+        height: "90%",
+        margin: "auto",
+        backgroundColor: "lime"
     }
     const formContainer = {
         position: 'absolute',
@@ -41,7 +48,7 @@ export default function AddNote( {handleSubmit, value} ) {
     return (
       <>
         <div style={styleContainer} >
-            <button onClick={(e) => setAdding(true)}>Add a Note</button>
+            <button style={customButton} onClick={(e) => setAdding(true)}>Add a Note</button>
 
             {   
                 Adding &&

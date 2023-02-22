@@ -1,7 +1,8 @@
 body {
   margin: 0;
 
-  background-color: #282c34;
+  /*background-color: #282c34; for dark mode */
+  background-color: white;  
   color: white;
   
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
