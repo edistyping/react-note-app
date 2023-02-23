@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/edistyping/react-note-app/static/css/main.50ae85be.css",
-    "main.js": "/edistyping/react-note-app/static/js/main.60a5b8cd.js",
-    "static/js/787.cbac3f32.chunk.js": "/edistyping/react-note-app/static/js/787.cbac3f32.chunk.js",
-    "index.html": "/edistyping/react-note-app/index.html",
-    "main.50ae85be.css.map": "/edistyping/react-note-app/static/css/main.50ae85be.css.map",
-    "main.60a5b8cd.js.map": "/edistyping/react-note-app/static/js/main.60a5b8cd.js.map",
-    "787.cbac3f32.chunk.js.map": "/edistyping/react-note-app/static/js/787.cbac3f32.chunk.js.map"
+    "main.css": "/edistyping/static/css/main.50ae85be.css",
+    "main.js": "/edistyping/static/js/main.b8ef0f9f.js",
+    "static/js/787.cbac3f32.chunk.js": "/edistyping/static/js/787.cbac3f32.chunk.js",
+    "index.html": "/edistyping/index.html",
+    "main.50ae85be.css.map": "/edistyping/static/css/main.50ae85be.css.map",
+    "main.b8ef0f9f.js.map": "/edistyping/static/js/main.b8ef0f9f.js.map",
+    "787.cbac3f32.chunk.js.map": "/edistyping/static/js/787.cbac3f32.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50ae85be.css",
-    "static/js/main.60a5b8cd.js"
+    "static/js/main.b8ef0f9f.js"
   ]
 }
