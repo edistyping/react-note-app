@@ -16,12 +16,63 @@
 
 
 /*     For Notes.js         */
-.Notes-Buttons {
-  display: flex;
-  width: fit-content;
-  background-color: aqua;
+.Notes-Container-Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
+.Note-Container {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  border: solid red 5px;
+  box-sizing: border-box;
+}
+.Notes-Header {
+  position: relative;
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+  height: fit-content;
+
+  z-index: 0;
+}
+.Notes-Buttons {
+  position: absolute;
+  display: flex;
+  
+  width: fit-content;
+  height: 70%;
+  background-color: aliceblue;
+  top: 0; left: 100; bottom: 0; right: 0;
+  margin: auto 2% auto auto;
+  padding: 0;
+}
+.Notes-Buttons button {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5em;
+  background-color: yellow;
+  margin-left: 5%;
+}
+
+/*     For EditNote.js      */
+.formContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+
+  height: auto;
+  width: 60vw;
+  background-color: blue;
+  z-index: 1;
+}
 
 /*     For FilterBar.js     */
 .FilterBar-Container {
@@ -31,7 +82,7 @@
 
   background-color: yellowgreen;
   height: 100%;
-  width: 70%;
+  width: 75%;
 }
 .FilterBar-Container button {
   margin-right: 3%;

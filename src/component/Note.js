@@ -11,7 +11,7 @@ export default function Note() {
     return (
       <>
         <div style={styleContainer} >
-            Note Here
+            Note Here. I don't think I need this 
         </div>
       </>
     )

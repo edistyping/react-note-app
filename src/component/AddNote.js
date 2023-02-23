@@ -7,6 +7,7 @@ export default function AddNote( {handleSubmit, value} ) {
         width: "70%",
         backgroundColor: "orange",
         display: "flex",        
+        marginTop: "3%"
     }
     const customButton = {
         width: "80%",
@@ -23,6 +24,7 @@ export default function AddNote( {handleSubmit, value} ) {
         height: '50vh',
         width: "60vw",
         backgroundColor: "green",
+        zIndex: 1,
     }
   
 
@@ -46,43 +48,43 @@ export default function AddNote( {handleSubmit, value} ) {
         When 'Submit' is clicked, add it to the Local Storage 
     */
     return (
-      <>
-        <div style={styleContainer} >
-            <button style={customButton} onClick={(e) => setAdding(true)}>Add a Note</button>
+        <>
+            <div style={styleContainer} >
+                <button style={customButton} onClick={(e) => setAdding(true)}>Add a Note</button>
 
-            {   
-                Adding &&
-                <form style={formContainer} onSubmit={formSubmit}>
+                {   
+                    Adding &&
+                    <form style={formContainer} onSubmit={formSubmit}>
 
-                    <button onClick={(e) => setAdding(false)} >X</button>
-                    <h2> Geeks For Geeks </h2>
-                    <h3> Sign-up Form </h3>
-                    <div>
+                        <button onClick={(e) => setAdding(false)} >X</button>
+                        <h2> Geeks For Geeks </h2>
+                        <h3> Sign-up Form </h3>
+                        <div>
+                            <label >
+                            Subject:
+                            </label><br/>
+                            <input name="title" type="text" required /><br/>
+
+                            <label >
+                            Category:
+                            </label><br/>
+                            <select name="category" id="cars">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="misc">Misc</option>
+                            </select>
+                        </div>
+
                         <label >
-                        Subject:
+                        Contents:
                         </label><br/>
-                        <input name="title" type="text" required /><br/>
+                        <input name="detail" type="text" placeholder='Provide any details here' /><br/>
 
-                        <label >
-                        Category:
-                        </label><br/>
-                        <select name="category" id="cars">
-                            <option value="personal">Personal</option>
-                            <option value="work">Work</option>
-                            <option value="misc">Misc</option>
-                        </select>
-                    </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                }
 
-                    <label >
-                    Contents:
-                    </label><br/>
-                    <input name="detail" type="text" placeholder='Provide any details here' /><br/>
-
-                    <button type="submit">Submit</button>
-                </form>
-            }
-
-        </div>
-      </>
+            </div>
+        </>
     )
   }

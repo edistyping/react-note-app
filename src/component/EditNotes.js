@@ -1,23 +1,28 @@
 import { useState, useEffect } from 'react';
 
+import '../App.css'
 
-export default function EditNote( {handleSubmitEdit, key1, note} ) {
+export default function EditNote( {handleSubmitEdit, handleCloseEdit, key1, note} ) {
     const styleContainer = {
-      height: 'auto',
-      width: "auto",
-      backgroundColor: "blue",
+        height: '100%',
+        width: "100%",
+
     }
     const formContainer = {
         position: 'absolute',
         top: "50%",
         left: "50%",
-        transform: "translate(-50%, -50%)", 
+        transform: "translate(-50%, -50%)",
+        margin: "auto", 
 
-        height: 'auto',
-        width: "auto",
-        backgroundColor: "green",
+        height: '10vh',
+        width: "60vw",
+        backgroundColor: "blue",
+        zIndex: 1,
+
     }
-  
+
+
     const [Editing, setEditng] = useState(false);
     const [title, setTitle] = useState(note.title);
     const [category, setCategory] = useState(note.category);
@@ -25,7 +30,7 @@ export default function EditNote( {handleSubmitEdit, key1, note} ) {
 
 
     // pass this back to parent
-    const handleSubmit2 = (e) => {    
+    const handleSubmit = (e) => {    
         e.preventDefault(); 
         setEditng(false);
 
@@ -41,15 +46,12 @@ export default function EditNote( {handleSubmitEdit, key1, note} ) {
     return (
       <>
         <div style={styleContainer} >
-            <button onClick={(e) => setEditng(true)}>Edit</button>
 
-            {   
-                Editing &&
-                <form style={formContainer} onSubmit={handleSubmit2}>
+                <form className='formContainer' onSubmit={handleSubmit}>
                 {/*when user submit the form , handleSubmit()
                     function will be called .*/}
-                <button onClick={(e) => setEditng(false)} >X</button>
-                <h2> ({key1}) - Geeks For Geeks </h2>
+                <button onClick={(e) => handleCloseEdit(false)} >X</button>
+                <h2> Updating: ({key1}) </h2>
                 <h3> Sign-up Form </h3>
                     <div>
                         <label >
@@ -76,7 +78,6 @@ export default function EditNote( {handleSubmitEdit, key1, note} ) {
 
                     <button type="submit">Submit</button>
                 </form>
-            }
 
         </div>
       </>

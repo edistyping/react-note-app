@@ -4,7 +4,6 @@ export default function FilterBar( {onClick, category} ) {
   const styleContainer = {
     height: '3vh',
     width: "100%",
-    backgroundColor: "yellow",
     color: "black",
   }
 
