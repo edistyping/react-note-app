@@ -1,5 +1,8 @@
 # Note Taking App using React! 
 
+![alt text](https://github.com/edistyping/react-note-app/blob/master/src/notes-app-ui.png?raw=true)
+
+
 Idea + Goals: 
 1. Do not use Database including SQLite this time... Instead use LocalStorage for saving contents and limit it up to 24 items (hint: LRU cache) 
 
